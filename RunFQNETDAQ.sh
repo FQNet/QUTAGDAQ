@@ -1,4 +1,4 @@
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sxie/QUTAG-LX64-V1.1.6
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/QUTAG-LX64-V1.1.6
 
 #####################################################################
 #Configuration Parameters
@@ -29,5 +29,5 @@ CollectRounds=$(($DAQTotalTime*1000000/$CollectTime))
 
 #echo $CoincidenceWindow $MasterRate $CollectTime $CollectRounds
 
-/home/sxie/QUTAG-LX64-V1.1.6/userlib/QUTAGDAQ/FQNETDAQ signal $CoincidenceWindow $MasterRate $CollectTime $CollectRounds
+~/QUTAG-LX64-V1.1.6/userlib/QUTAGDAQ/FQNETDAQ signal $CoincidenceWindow $MasterRate $CollectTime $CollectRounds
 

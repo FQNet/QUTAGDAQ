@@ -24,14 +24,11 @@ INCDIR=../inc
 #endef
 #$(foreach src,$(TARGET),$(eval $(call outputrule,$(src))))
 
-
 CXX = gcc
-#CXX = $(shell root-config --cxx)
-
 INC = $(shell pwd)
-LD = $(shell root-config --ld)
-CPPFLAGS := $(shell root-config --cflags) -I$(INC)/../inc
-LDFLAGS := -L../lib -ltdcbase -lftd3xx $(shell root-config --glibs) $(STDLIBDIR)
+LD = c++
+CPPFLAGS := -pthread -std=c++11 -m64 -I$(INC)/../inc
+LDFLAGS := -L../lib -ltdcbase -lftd3xx 
 
 CPPFLAGS += -g 
 
